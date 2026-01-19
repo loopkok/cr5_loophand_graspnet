@@ -1,0 +1,756 @@
+execve("/home/loopkok/anaconda3/envs/cr5/bin/python", ["python", "-c", "import \345\217\257\350\203\275\347\232\204\345\272\223\345\220\215"], 0x7ffe5b142460 /* 118 vars */) = 0
+brk(NULL)                               = 0x37496000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffc04fe2350) = -1 EINVAL (Invalid argument)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7a5a78aa7000
+readlink("/proc/self/exe", "/home/loopkok/anaconda3/envs/cr5"..., 4096) = 47
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/glibc-hwcaps/x86-64-v3/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/glibc-hwcaps/x86-64-v3", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/glibc-hwcaps/x86-64-v2/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/glibc-hwcaps/x86-64-v2", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/tls/x86_64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/tls/x86_64/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/tls/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/tls/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/tls/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/tls", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/x86_64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/x86_64/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib", {st_mode=S_IFDIR|0775, st_size=69632, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/local/cuda/lib64/glibc-hwcaps/x86-64-v3/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/lib64/glibc-hwcaps/x86-64-v3", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/lib64/glibc-hwcaps/x86-64-v2/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/lib64/glibc-hwcaps/x86-64-v2", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/lib64/tls/x86_64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/lib64/tls/x86_64/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/lib64/tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/lib64/tls/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/lib64/tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/lib64/tls/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/lib64/tls/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/lib64/tls", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/lib64/x86_64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/lib64/x86_64/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/lib64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/lib64/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/lib64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/lib64/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/lib64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/lib64", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/glibc-hwcaps/x86-64-v3/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/glibc-hwcaps/x86-64-v3", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/glibc-hwcaps/x86-64-v2/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/glibc-hwcaps/x86-64-v2", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/tls/x86_64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/tls/x86_64/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/tls/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/tls/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/tls/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/tls", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/x86_64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/x86_64/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/x86_64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda/extras/CPUTI/lib64", 0x7ffc04fe1570, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=181152, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 181152, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7a5a78a7a000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=21448, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16424, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7a5a78a75000
+mmap(0x7a5a78a76000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7a5a78a76000
+mmap(0x7a5a78a77000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7a5a78a77000
+mmap(0x7a5a78a78000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7a5a78a78000
+close(3)                                = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/lib64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=14432, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16424, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7a5a78a70000
+mmap(0x7a5a78a71000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7a5a78a71000
+mmap(0x7a5a78a72000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7a5a78a72000
+mmap(0x7a5a78a73000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7a5a78a73000
+close(3)                                = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/lib64/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libutil.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=14432, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16424, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7a5a78a6b000
+mmap(0x7a5a78a6c000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7a5a78a6c000
+mmap(0x7a5a78a6d000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7a5a78a6d000
+mmap(0x7a5a78a6e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7a5a78a6e000
+close(3)                                = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/lib64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7a5a78984000
+mmap(0x7a5a78992000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7a5a78992000
+mmap(0x7a5a78a0e000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x7a5a78a0e000
+mmap(0x7a5a78a69000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x7a5a78a69000
+close(3)                                = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/../lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0O{\f\225\\=\201\327\312\301P\32$\230\266\235"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7a5a78600000
+mprotect(0x7a5a78628000, 2023424, PROT_NONE) = 0
+mmap(0x7a5a78628000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7a5a78628000
+mmap(0x7a5a787bd000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7a5a787bd000
+mmap(0x7a5a78816000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7a5a78816000
+mmap(0x7a5a7881c000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7a5a7881c000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7a5a78982000
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7a5a7897f000
+arch_prctl(ARCH_SET_FS, 0x7a5a7897f740) = 0
+set_tid_address(0x7a5a7897fa10)         = 6730
+set_robust_list(0x7a5a7897fa20, 24)     = 0
+rseq(0x7a5a789800e0, 0x20, 0, 0x53053053) = 0
+mprotect(0x7a5a78816000, 16384, PROT_READ) = 0
+mprotect(0x7a5a78a69000, 4096, PROT_READ) = 0
+mprotect(0x7a5a78a6e000, 4096, PROT_READ) = 0
+mprotect(0x7a5a78a73000, 4096, PROT_READ) = 0
+mprotect(0x7a5a78a78000, 4096, PROT_READ) = 0
+mprotect(0x722000, 4096, PROT_READ)     = 0
+mprotect(0x7a5a78ae1000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7a5a78a7a000, 181152)          = 0
+getrandom("\x9a\x9c\x21\x38\x18\xe4\x66\x3c", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x37496000
+brk(0x374b7000)                         = 0x374b7000
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=8876560, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 8876560, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7a5a77c00000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=27002, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 27002, PROT_READ, MAP_SHARED, 3, 0) = 0x7a5a78aa0000
+close(3)                                = 0
+futex(0x7a5a7881ba6c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+getrandom("\x61\x80\xbe\x9f\x72\x24\x9f\x87\x52\x2b\xc7\xec\x32\xae\x01\x91\xb8\x4d\x76\xb6\xe9\xaa\xd6\x15", 24, GRND_NONBLOCK) = 24
+mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7a5a7887f000
+brk(0x374d8000)                         = 0x374d8000
+brk(0x374fe000)                         = 0x374fe000
+stat("/home/loopkok/anaconda3/envs/cr5/bin/python", {st_mode=S_IFREG|0775, st_size=17250880, ...}) = 0
+readlink("/home/loopkok/anaconda3/envs/cr5/bin/python", "python3.10", 4096) = 10
+readlink("/home/loopkok/anaconda3/envs/cr5/bin/python3.10", 0x7ffc04fdcc60, 4096) = -1 EINVAL (Invalid argument)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/pyvenv.cfg", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/pyvenv.cfg", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/bin/Modules/Setup.local", 0x7ffc04fddc30) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/bin/lib/python3.10/os.py", 0x7ffc04fddb10) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/bin/lib/python3.10/os.pyc", 0x7ffc04fddb10) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/os.py", {st_mode=S_IFREG|0664, st_size=39557, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/bin/pybuilddir.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/bin/lib/python3.10/lib-dynload", 0x7ffc04fdccb0) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/lib-dynload", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7a5a78500000
+brk(0x37521000)                         = 0x37521000
+sysinfo({uptime=220, loads=[404640, 236992, 97856], totalram=16081932288, freeram=6742777856, sharedram=99655680, bufferram=486109184, totalswap=19999485952, freeswap=19999485952, procs=1293, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+openat(AT_FDCWD, "/etc/localtime", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=561, ...}, AT_EMPTY_PATH) = 0
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=561, ...}, AT_EMPTY_PATH) = 0
+read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 561
+lseek(3, -342, SEEK_CUR)                = 219
+read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 342
+close(3)                                = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x37503300 /* 5 entries */, 32768) = 192
+getdents64(3, 0x37503300 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x37503300 /* 4 entries */, 32768) = 152
+getdents64(3, 0x37503300 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x37503300 /* 4 entries */, 32768) = 136
+getdents64(3, 0x37503300 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x37503300 /* 4 entries */, 32768) = 168
+getdents64(3, 0x37503300 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x37503300 /* 4 entries */, 32768) = 152
+getdents64(3, 0x37503300 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+openat(AT_FDCWD, "/opt/ros/humble/lib/python3.10/site-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0777, st_size=12288, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x37503300 /* 171 entries */, 32768) = 7832
+getdents64(3, 0x37503300 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+openat(AT_FDCWD, "/opt/ros/humble/local/lib/python3.10/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0777, st_size=12288, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x37505b20 /* 180 entries */, 32768) = 8848
+getdents64(3, 0x37505b20 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python310.zip", 0x7ffc04fe05f0) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/lib", {st_mode=S_IFDIR|0775, st_size=69632, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python310.zip", 0x7ffc04fe0390) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0775, st_size=12288, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x37508340 /* 210 entries */, 32768) = 7088
+getdents64(3, 0x37508340 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings/__init__.cpython-310-x86_64-linux-gnu.so", 0x7ffc04fe0760) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings/__init__.abi3.so", 0x7ffc04fe0760) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings/__init__.so", 0x7ffc04fe0760) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings/__init__.py", {st_mode=S_IFREG|0664, st_size=5620, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings/__init__.py", {st_mode=S_IFREG|0664, st_size=5620, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings/__pycache__/__init__.cpython-310.pyc", O_RDONLY|O_CLOEXEC) = 3
+fcntl(3, F_GETFD)                       = 0x1 (flags FD_CLOEXEC)
+fstat(3, {st_mode=S_IFREG|0664, st_size=3870, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fe0a80)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=3870, ...}) = 0
+read(3, "o\r\r\n\0\0\0\0\20\272\367h\364\25\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 3871) = 3870
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/codecs.py", {st_mode=S_IFREG|0664, st_size=36714, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/codecs.py", {st_mode=S_IFREG|0664, st_size=36714, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/__pycache__/codecs.cpython-310.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=33214, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fdfc80)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=33214, ...}) = 0
+read(3, "o\r\r\n\0\0\0\0\20\272\367hj\217\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 33215) = 33214
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x37516b00 /* 125 entries */, 32768) = 4224
+getdents64(3, 0x37516b00 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings/aliases.py", {st_mode=S_IFREG|0664, st_size=15677, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings/aliases.py", {st_mode=S_IFREG|0664, st_size=15677, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings/__pycache__/aliases.cpython-310.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=11175, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fdf5d0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=11175, ...}) = 0
+read(3, "o\r\r\n\0\0\0\0\20\272\367h==\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 11176) = 11175
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings/utf_8.py", {st_mode=S_IFREG|0664, st_size=1005, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings/utf_8.py", {st_mode=S_IFREG|0664, st_size=1005, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/encodings/__pycache__/utf_8.cpython-310.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=1851, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fe0ab0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=1851, ...}) = 0
+read(3, "o\r\r\n\0\0\0\0\21\272\367h\355\3\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1852) = 1851
+read(3, "", 1)                          = 0
+close(3)                                = 0
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x7a5a78642520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGXFSZ, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x7a5a78642520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGHUP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGQUIT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGILL, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTRAP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGABRT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGFPE, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGKILL, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGUSR1, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGUSR2, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPIPE, NULL, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x7a5a78642520}, 8) = 0
+rt_sigaction(SIGALRM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSTKFLT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGCHLD, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGCONT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSTOP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTSTP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTTIN, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTTOU, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGURG, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGXCPU, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGXFSZ, NULL, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x7a5a78642520}, 8) = 0
+rt_sigaction(SIGVTALRM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPROF, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGWINCH, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGIO, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPWR, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSYS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_2, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_3, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_4, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_5, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_6, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_7, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_8, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_9, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_10, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_11, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_12, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_13, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_14, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_15, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_16, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_17, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_18, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_19, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_20, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_21, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_22, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_23, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_24, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_25, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_26, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_27, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_28, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_29, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_30, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_31, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_32, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x495e37, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x7a5a78642520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x6), ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/io.py", {st_mode=S_IFREG|0664, st_size=4196, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/io.py", {st_mode=S_IFREG|0664, st_size=4196, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/__pycache__/io.cpython-310.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=3658, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fe0b50)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=3658, ...}) = 0
+read(3, "o\r\r\n\0\0\0\0\20\272\367hd\20\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 3659) = 3658
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/abc.py", {st_mode=S_IFREG|0664, st_size=6522, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/abc.py", {st_mode=S_IFREG|0664, st_size=6522, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/__pycache__/abc.cpython-310.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=7005, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fdfd50)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=7005, ...}) = 0
+read(3, "o\r\r\n\0\0\0\0\17\272\367hz\31\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 7006) = 7005
+read(3, "", 1)                          = 0
+close(3)                                = 0
+brk(0x37542000)                         = 0x37542000
+dup(0)                                  = 3
+close(3)                                = 0
+fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x6), ...}) = 0
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+lseek(0, 0, SEEK_CUR)                   = -1 ESPIPE (Illegal seek)
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+dup(1)                                  = 3
+close(3)                                = 0
+fstat(1, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+ioctl(1, TCGETS, 0x7ffc04fe1af0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(1, 0, SEEK_CUR)                   = -1 ESPIPE (Illegal seek)
+ioctl(1, TCGETS, 0x7ffc04fe1db0)        = -1 ENOTTY (Inappropriate ioctl for device)
+dup(2)                                  = 3
+close(3)                                = 0
+fstat(2, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+ioctl(2, TCGETS, 0x7ffc04fe1af0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(2, 0, SEEK_CUR)                   = -1 ESPIPE (Illegal seek)
+ioctl(2, TCGETS, 0x7ffc04fe1db0)        = -1 ENOTTY (Inappropriate ioctl for device)
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site.py", {st_mode=S_IFREG|0664, st_size=22926, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site.py", {st_mode=S_IFREG|0664, st_size=22926, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/__pycache__/site.cpython-310.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=17902, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fe0b50)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=17902, ...}) = 0
+read(3, "o\r\r\n\0\0\0\0\20\272\367h\216Y\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 17903) = 17902
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/os.py", {st_mode=S_IFREG|0664, st_size=39557, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/os.py", {st_mode=S_IFREG|0664, st_size=39557, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/__pycache__/os.cpython-310.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=31594, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fdfd50)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=31594, ...}) = 0
+read(3, "o\r\r\n\0\0\0\0\20\272\367h\205\232\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 31595) = 31594
+read(3, "", 1)                          = 0
+close(3)                                = 0
+mmap(NULL, 151552, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7a5a78a7b000
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/stat.py", {st_mode=S_IFREG|0664, st_size=5485, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/stat.py", {st_mode=S_IFREG|0664, st_size=5485, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/__pycache__/stat.cpython-310.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=4527, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fdef50)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=4527, ...}) = 0
+read(3, "o\r\r\n\0\0\0\0\20\272\367hm\25\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4528) = 4527
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/_collections_abc.py", {st_mode=S_IFREG|0664, st_size=32284, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/_collections_abc.py", {st_mode=S_IFREG|0664, st_size=32284, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/__pycache__/_collections_abc.cpython-310.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=32920, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fdef50)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=32920, ...}) = 0
+read(3, "o\r\r\n\0\0\0\0\17\272\367h\34~\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 32921) = 32920
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/posixpath.py", {st_mode=S_IFREG|0664, st_size=16436, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/posixpath.py", {st_mode=S_IFREG|0664, st_size=16436, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/__pycache__/posixpath.cpython-310.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=10646, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fdef50)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=10646, ...}) = 0
+read(3, "o\r\r\n\0\0\0\0\20\272\367h4@\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 10647) = 10646
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/genericpath.py", {st_mode=S_IFREG|0664, st_size=5246, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/genericpath.py", {st_mode=S_IFREG|0664, st_size=5246, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/__pycache__/genericpath.cpython-310.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=4680, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fde150)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=4680, ...}) = 0
+read(3, "o\r\r\n\0\0\0\0\20\272\367h~\24\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4681) = 4680
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/_sitebuiltins.py", {st_mode=S_IFREG|0664, st_size=3128, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/_sitebuiltins.py", {st_mode=S_IFREG|0664, st_size=3128, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/__pycache__/_sitebuiltins.cpython-310.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=3801, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fdfd50)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=3801, ...}) = 0
+read(3, "o\r\r\n\0\0\0\0\17\272\367h8\f\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 3802) = 3801
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/home/loopkok/anaconda3/envs/cr5/bin/pyvenv.cfg", 0x7ffc04fe0600) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/pyvenv.cfg", 0x7ffc04fe0600) = -1 ENOENT (No such file or directory)
+geteuid()                               = 1000
+getuid()                                = 1000
+getegid()                               = 1000
+getgid()                                = 1000
+stat("/home/loopkok/.local/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/.local/lib/python3.10/site-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x3752fbb0 /* 67 entries */, 32768) = 2696
+getdents64(3, 0x3752fbb0 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+lstat("/home/loopkok/.local/lib/python3.10/site-packages/aero_open_sdk.pth", {st_mode=S_IFREG|0664, st_size=55, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/.local/lib/python3.10/site-packages/aero_open_sdk.pth", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=55, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fe0340)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+ioctl(3, TCGETS, 0x7ffc04fe0610)        = -1 ENOTTY (Inappropriate ioctl for device)
+read(3, "/home/loopkok/Documents/loophand"..., 8192) = 55
+read(3, "", 8192)                       = 0
+stat("/home/loopkok/Documents/loophand/aero-hand-open/sdk/src", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+read(3, "", 8192)                       = 0
+close(3)                                = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0775, st_size=12288, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x3752fbb0 /* 245 entries */, 32768) = 10104
+getdents64(3, 0x3752fbb0 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+lstat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages/aero_open_sdk.pth", {st_mode=S_IFREG|0664, st_size=55, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages/aero_open_sdk.pth", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=55, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fe0340)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+ioctl(3, TCGETS, 0x7ffc04fe0610)        = -1 ENOTTY (Inappropriate ioctl for device)
+read(3, "/home/loopkok/Documents/loophand"..., 8192) = 55
+read(3, "", 8192)                       = 0
+read(3, "", 8192)                       = 0
+close(3)                                = 0
+lstat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages/distutils-precedence.pth", {st_mode=S_IFREG|0664, st_size=151, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages/distutils-precedence.pth", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=151, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc04fe0340)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+ioctl(3, TCGETS, 0x7ffc04fe0610)        = -1 ENOTTY (Inappropriate ioctl for device)
+read(3, "import os; var = 'SETUPTOOLS_USE"..., 8192) = 151
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/lib-dynload", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/lib-dynload", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/lib-dynload", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/lib-dynload", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+newfstatat(4, "", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+getdents64(4, 0x37531be0 /* 77 entries */, 32768) = 4840
+getdents64(4, 0x37531be0 /* 0 entries */, 32768) = 0
+close(4)                                = 0
+stat("/home/loopkok/.local/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/.local/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/.local/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/.local/lib/python3.10/site-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+newfstatat(4, "", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+getdents64(4, 0x37531be0 /* 67 entries */, 32768) = 2696
+getdents64(4, 0x37531be0 /* 0 entries */, 32768) = 0
+close(4)                                = 0
+stat("/home/loopkok/Documents/loophand/aero-hand-open/sdk/src", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/loophand/aero-hand-open/sdk/src", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/loophand/aero-hand-open/sdk/src", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/Documents/loophand/aero-hand-open/sdk/src", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+newfstatat(4, "", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+getdents64(4, 0x37531be0 /* 3 entries */, 32768) = 88
+getdents64(4, 0x37531be0 /* 0 entries */, 32768) = 0
+close(4)                                = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+newfstatat(4, "", {st_mode=S_IFDIR|0775, st_size=12288, ...}, AT_EMPTY_PATH) = 0
+getdents64(4, 0x37531be0 /* 245 entries */, 32768) = 10104
+getdents64(4, 0x37531be0 /* 0 entries */, 32768) = 0
+close(4)                                = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages/_distutils_hack/__init__.cpython-310-x86_64-linux-gnu.so", 0x7ffc04fdef00) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages/_distutils_hack/__init__.abi3.so", 0x7ffc04fdef00) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages/_distutils_hack/__init__.so", 0x7ffc04fdef00) = -1 ENOENT (No such file or directory)
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages/_distutils_hack/__init__.py", {st_mode=S_IFREG|0664, st_size=6755, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages/_distutils_hack/__init__.py", {st_mode=S_IFREG|0664, st_size=6755, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages/_distutils_hack/__pycache__/__init__.cpython-310.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0664, st_size=8206, ...}) = 0
+ioctl(4, TCGETS, 0x7ffc04fdf220)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0664, st_size=8206, ...}) = 0
+read(4, "o\r\r\n\0\0\0\0\277\r5hc\32\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 8207) = 8206
+read(4, "", 1)                          = 0
+close(4)                                = 0
+read(3, "", 8192)                       = 0
+close(3)                                = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/lib-dynload", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/.local/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/loophand/aero-hand-open/sdk/src", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/lib-dynload", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/.local/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/loophand/aero-hand-open/sdk/src", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+getcwd("/home/loopkok/Documents/grasp_ws/src/TCP-IP-Python-V3-main", 1024) = 59
+stat("/home/loopkok/Documents/grasp_ws/src/TCP-IP-Python-V3-main", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/grasp_ws/src/TCP-IP-Python-V3-main", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/grasp_ws/src/TCP-IP-Python-V3-main", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/Documents/grasp_ws/src/TCP-IP-Python-V3-main", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x37534660 /* 24 entries */, 32768) = 816
+getdents64(3, 0x37534660 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/lib-dynload", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/lib-dynload/unicodedata.cpython-310-x86_64-linux-gnu.so", {st_mode=S_IFREG|0775, st_size=1208152, ...}) = 0
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/lib-dynload/unicodedata.cpython-310-x86_64-linux-gnu.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0775, st_size=1208152, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 1117104, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7a5a77aef000
+mmap(0x7a5a77af2000, 16384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7a5a77af2000
+mmap(0x7a5a77af6000, 1081344, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7000) = 0x7a5a77af6000
+mmap(0x7a5a77bfe000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10f000) = 0x7a5a77bfe000
+close(3)                                = 0
+mprotect(0x7a5a77bfe000, 4096, PROT_READ) = 0
+getcwd("/home/loopkok/Documents/grasp_ws/src/TCP-IP-Python-V3-main", 1024) = 59
+stat("/home/loopkok/Documents/grasp_ws/src/TCP-IP-Python-V3-main", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/opt/ros/humble/lib/python3.10/site-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/opt/ros/humble/local/lib/python3.10/dist-packages", {st_mode=S_IFDIR|0777, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/lib-dynload", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/.local/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/Documents/loophand/aero-hand-open/sdk/src", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages", {st_mode=S_IFDIR|0775, st_size=12288, ...}) = 0
+write(2, "Traceback (most recent call last"..., 35) = 35
+write(2, "  File \"<string>\", line 1, in <m"..., 39) = 39
+openat(AT_FDCWD, "<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages/<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/Documents/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages/<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/Documents/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages/<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/Documents/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages/<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/Documents/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages/<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/opt/ros/humble/lib/python3.10/site-packages/<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/opt/ros/humble/local/lib/python3.10/dist-packages/<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python310.zip/<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/lib-dynload/<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/.local/lib/python3.10/site-packages/<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/Documents/loophand/aero-hand-open/sdk/src/<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/loopkok/anaconda3/envs/cr5/lib/python3.10/site-packages/<string>", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+write(2, "ModuleNotFoundError: No module n"..., 55) = 55
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x7a5a78642520}, {sa_handler=0x495e37, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x7a5a78642520}, 8) = 0
+munmap(0x7a5a78a7b000, 151552)          = 0
+exit_group(1)                           = ?
++++ exited with 1 +++
