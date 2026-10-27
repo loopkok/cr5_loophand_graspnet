@@ -1,3 +1,5 @@
+import os
+import sys
 import time
 import logging
 import threading
@@ -6,7 +8,12 @@ import pinocchio as pin
 from collections import deque
 from enum import Enum
 
-# 引入硬件驱动 
+# 本文件位于 loophand/examples/，把 loophand/ 加入模块搜索路径
+_LOOPHAND_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _LOOPHAND_ROOT not in sys.path:
+    sys.path.insert(0, _LOOPHAND_ROOT)
+
+# 引入硬件驱动
 from aero_open_sdk.aero_hand import AeroHand
 from extern_driver.tactile_driver import TactileSensor
 from controller.pid import BoundedPID
@@ -75,7 +82,7 @@ class SignalProcessor:
 
 # ================= 触觉手控制器主类 =================
 class ShearGraspController(threading.Thread):
-    def __init__(self, urdf_path="./urdf/aero_hand_open_left.urdf", port_hand="/dev/ttyACM1", port_tactile="/dev/ttyACM0"):
+    def __init__(self, urdf_path=os.path.join(_LOOPHAND_ROOT, "urdf", "aero_hand_open_left.urdf"), port_hand="/dev/ttyACM1", port_tactile="/dev/ttyACM0"):
         super().__init__()
         self.daemon = True  # 设置为守护线程，主程序退出时自动退出
         
