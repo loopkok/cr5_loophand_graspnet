@@ -12,7 +12,7 @@ __pycache__/
 Log/
 
 # Captured data and debug artifacts
-graspnet-baseline/apple_data/
-graspnet-baseline/cap_data/capture_*.png
-graspnet-baseline/debug_data/mask_output.png
+graspnet-baseline/data/apple_data/
+graspnet-baseline/data/cap_data/capture_*.png
+graspnet-baseline/data/debug_data/mask_output.png
 graspnet-baseline/mask_test.png
