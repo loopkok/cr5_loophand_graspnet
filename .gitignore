@@ -1,0 +1,18 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
+
+# Logs
+*.log
+Log/
+
+# Captured data and debug artifacts
+graspnet-baseline/apple_data/
+graspnet-baseline/cap_data/capture_*.png
+graspnet-baseline/debug_data/mask_output.png
+graspnet-baseline/mask_test.png
