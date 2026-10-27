@@ -292,7 +292,7 @@ if __name__ == "__main__":
         size=(11, 8),      # 记得改成你实际的内角点数
         size_step=2.0,    # 记得改成你实际的边长
         img_num=20,       # 图片数量
-        cal_path="./cab_data/cab1" # 这里填你刚才新建文件夹的名字
+        cal_path="./data/cab_data/cab1" # 这里填你刚才新建文件夹的名字
 
     )
     

@@ -196,7 +196,7 @@ class Gemini335:
                         print("退出程序...")
                         break
                     elif key == ord('s'):
-                        save_dir = "./apple_data"
+                        save_dir = "./data/apple_data"
                         # 保存时传入 3 个必要数据
                         self.save_frame(color, raw_depth, depth_viz, save_dir)
                         

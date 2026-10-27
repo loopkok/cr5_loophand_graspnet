@@ -1,3 +1,5 @@
+import os
+import sys
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -53,5 +55,7 @@ def inspect_depth(depth_path):
     plt.colorbar(label='Depth (mm)')
     plt.show()
 
-# 运行检查
-inspect_depth('/home/loopkok/Documents/cr5_loophand_graspnet/graspnet-baseline/doc/example_data/test/depth.png')
+# 运行检查：python check_depth.py [depth_raw.png]
+if __name__ == '__main__':
+    default_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'debug_data', 'latest_depth.png')
+    inspect_depth(sys.argv[1] if len(sys.argv) > 1 else default_path)

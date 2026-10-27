@@ -2,6 +2,7 @@
     Author: chenxi-wang
 """
 
+import glob
 import os
 import sys
 import numpy as np
@@ -54,14 +55,27 @@ def get_and_process_data(data_dir):
     # load data
     color_dir = os.path.join(data_dir, "color")
     depth_dir = os.path.join(data_dir, "depth")
-    color_img = cv2.imread(os.path.join(color_dir, 'capture_1774507761_color.png'))
-    color = np.array(Image.open(os.path.join(color_dir, 'capture_1774507761_color.png')), dtype=np.float32) / 255.0
-    depth = np.array(Image.open(os.path.join(depth_dir, 'capture_1774507761_depth_raw.png')))
+
+    # 自动选取最新的一帧彩色图，并按同一时间戳匹配原始深度图
+    color_files = sorted(glob.glob(os.path.join(color_dir, "*_color.png")))
+    if not color_files:
+        raise FileNotFoundError(f"未在 {color_dir} 找到 *_color.png 图像")
+    color_path = color_files[-1]
+    timestamp = os.path.basename(color_path).split("_")[1]
+    depth_path = os.path.join(depth_dir, f"capture_{timestamp}_depth_raw.png")
+    if not os.path.exists(depth_path):
+        raise FileNotFoundError(f"未找到与 {color_path} 匹配的深度图: {depth_path}")
+    print(f"Debug: 使用彩色图 {color_path}")
+    print(f"Debug: 使用深度图 {depth_path}")
+
+    color_img = cv2.imread(color_path)
+    color = np.array(Image.open(color_path), dtype=np.float32) / 255.0
+    depth = np.array(Image.open(depth_path))
     img_h, img_w = depth.shape  # 读出来的可能是 (400, 640)
     print(f"Debug: 实际读取到的深度图尺寸为: {img_w}x{img_h}")
     #depth_raw
     #seg_mask= np.array(Image.open(os.path.join(data_dir, 'workspace_mask.png')))
-    seg_mask = segment_image(color_img, output_mask='./debug_data/mask_output.png')
+    seg_mask = segment_image(color_img, output_mask='./data/debug_data/mask_output.png')
     
     if seg_mask is not None:
         # 转换成bool类型，给到graspnet进行深度点云索引，只要像素值大于 0，就变成 True，否则是 False
@@ -141,5 +155,5 @@ def demo(data_dir):
     vis_grasps(gg, cloud)
 if __name__=='__main__':
     # data_dir = 'doc/example_data/debug_data'
-    data_dir = '/home/loopkok/Documents/cr5_loophand_graspnet/graspnet-baseline/apple_data'
+    data_dir = os.path.join(ROOT_DIR, 'data', 'apple_data')
     demo(data_dir)

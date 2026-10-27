@@ -256,7 +256,7 @@ def main():
 
     # 3. 捕捉当前相机的画面
     print("正在获取相机画面...")
-    image_path = r"./debug_data/latest_color.png" 
+    image_path = r"./data/debug_data/latest_color.png"
     test_image = cv2.imread(image_path)
     # color_image, _ = client.capture_images()
     if test_image is None:

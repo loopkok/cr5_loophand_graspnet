@@ -141,7 +141,7 @@ def generate_robot_actions(user_command, image_input=None):
 # ----------------------- SAM 分割相关 -----------------------
 def choose_model():
     """Initialize SAM predictor with proper parameters"""
-    model_weight = 'sam_b.pt'
+    model_weight = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sam_b.pt')
     overrides = dict(
         task='segment',
         mode='predict',
@@ -398,7 +398,7 @@ def segment_image(image_input, output_mask='mask1.png'):
 
 # ----------------------- 主程序入口 -----------------------
 if __name__ == '__main__':
-    img_path = './debug_data/latest_color.png'
+    img_path = './data/debug_data/latest_color.png'
     
     # 1. 用 OpenCV 把路径读取为真实的 numpy 图像矩阵
     image_matrix = cv2.imread(img_path)
@@ -408,5 +408,5 @@ if __name__ == '__main__':
         print(f"❌ 读取图片失败，请检查路径是否正确: {img_path}")
     else:
         # 3. 把真正的图像矩阵传进函数
-        seg_mask = segment_image(image_matrix, output_mask='./debug_data/mask_output.png')
+        seg_mask = segment_image(image_matrix, output_mask='./data/debug_data/mask_output.png')
         print("Segmentation result mask shape:", seg_mask.shape if seg_mask is not None else None)

@@ -164,8 +164,9 @@ if __name__ == '__main__':
     parsed=args.parse_args()
 
     # 手动定义参数
-    parsed.json_dir='/home/loopkok/Documents/cr5_loophand_graspnet/graspnet-baseline/cap_data/labelme_jsons'
-    parsed.mask_dir='/home/loopkok/Documents/cr5_loophand_graspnet/graspnet-baseline/cap_data/masks'
+    _root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    parsed.json_dir=os.path.join(_root, 'data', 'cap_data', 'labelme_jsons')
+    parsed.mask_dir=os.path.join(_root, 'data', 'cap_data', 'masks')
     
     # 你的标签，请确认这里写对了
     parsed.labels_name=['a'] 

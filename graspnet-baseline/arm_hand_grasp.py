@@ -35,8 +35,8 @@ PLACE_POSE = [-84.6480479, -700.69554335, 357.43467829, -176.9688317, -0.7702422
 # 2. 抓取参数
 PRE_GRASP_DIST = 100.0   # 预抓取距离 10cmn
 
-# 3. 调试路径
-SAVE_DIR = "./debug_data"
+# 3. 调试路径（相对 graspnet-baseline/ 运行）
+SAVE_DIR = "./data/debug_data"
 MASK_PATH = os.path.join(SAVE_DIR, "workspace_mask.png")
 
 # 4. 运动参数
@@ -86,7 +86,8 @@ class GraspSystem:
         # 3. 触觉灵巧手初始化
         try:
             print("[Hand] 正在启动触觉手控制器...")
-            self.hand_controller = ShearGraspController(urdf_path="/home/loopkok/Documents/cr5_loophand_graspnet/loophand/urdf/aero_hand_open_left.urdf")
+            hand_urdf = os.path.join(project_root, "loophand", "urdf", "aero_hand_open_left.urdf")
+            self.hand_controller = ShearGraspController(urdf_path=hand_urdf)
             self.hand_controller.start()
             print("[Hand] 触觉控制线程已在后台运行")
         except Exception as e:
@@ -172,7 +173,7 @@ class GraspSystem:
                 cv2.imwrite(f"{SAVE_DIR}/latest_color.png", color)
                 cv2.imwrite(f"{SAVE_DIR}/latest_depth.png", raw_depth)
                 # mask = self.generate_simple_mask(color.shape)
-                seg_mask = segment_image(color, output_mask='./debug_data/mask_output.png')
+                seg_mask = segment_image(color, output_mask=os.path.join(SAVE_DIR, "mask_output.png"))
                 
                 if seg_mask is not None:
                     # 转换成bool类型，给到graspnet进行深度点云索引，只要像素值大于 0，就变成 True，否则是 False

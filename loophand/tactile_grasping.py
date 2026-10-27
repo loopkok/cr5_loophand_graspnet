@@ -1,3 +1,4 @@
+import os
 import time
 import logging
 import threading
@@ -6,6 +7,8 @@ import pinocchio as pin
 from collections import deque
 from enum import Enum
 from typing import List
+
+_LOOPHAND_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # ================= 引入依赖 (根据你的实际项目路径调整) =================
 # 假设你的目录结构支持以下导入，如果报错请调整路径
@@ -87,7 +90,7 @@ class SignalProcessor:
 
 # ================= 3. 控制器主类 (Thread化) =================
 class ShearGraspController(threading.Thread):
-    def __init__(self, urdf_path="./urdf/aero_hand_open_left.urdf", port_hand="/dev/ttyACM1", port_tactile="/dev/ttyACM0"):
+    def __init__(self, urdf_path=os.path.join(_LOOPHAND_ROOT, "urdf", "aero_hand_open_left.urdf"), port_hand="/dev/ttyACM1", port_tactile="/dev/ttyACM0"):
         super().__init__()
         self.daemon = True # 守护线程
         
