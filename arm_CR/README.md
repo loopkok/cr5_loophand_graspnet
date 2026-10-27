@@ -1,286 +1,172 @@
+# arm_CR —— Dobot CR5 机械臂控制模块
+
+本模块封装 Dobot CR5 的 TCP/IP 通信，向上提供简洁的运动与状态接口，并附带一组**笛卡尔导纳控制**实验代码。
+
+- Dobot 官方 SDK 文档（中文）：[README_Dobot_API.md](README_Dobot_API.md)
+- Dobot 官方 SDK 文档（英文）：[README-EN.md](README-EN.md)
+- 项目整体说明：[../README.md](../README.md)
+
 ---
 
-typora-root-url: ./images
+## 1. 文件分类
+
+### 1.1 项目自定义
+
+| 文件 | 作用 |
+| --- | --- |
+| `cr5.py` | **核心封装**：连接、使能、反馈线程、错误处理、`ServoP`/`ServoJ`、SE3 ↔ 位姿转换 |
+| `admittanccontroller.py` | 机械臂笛卡尔导纳控制器（三轴） |
+| `virtualforcecontroller.py` | 键盘虚拟力输入（方向键/PageUp/PageDown/R） |
+| `test_admittance_control.py` | 导纳控制示例：虚拟力 → 导纳 → `MoveCartesian` |
+| `force_plotter.py` | 基于 `matplotlib` 的六维力实时曲线 |
+| `real_plot.py` | 通用 Tkinter 实时绘图组件 |
+
+### 1.2 Dobot 官方 / 示例
+
+| 文件 | 作用 |
+| --- | --- |
+| `dobot_api.py` | Dobot TCP/IP Python SDK（Dashboard / Move / FeedBack） |
+| `main.py` | 官方连接与反馈示例 |
+| `main_UI.py`、`ui.py` | 官方 Tkinter 控制界面 |
+| `PythonExample.py` | 官方指令示例 |
+| `files/` | 控制器/伺服告警码表（`cr5.py` 错误处理使用） |
+| `images/` | 官方文档图片 |
+| `README_Dobot_API.md`、`README-EN.md` | 官方 SDK 文档 |
+
 ---
 
-English version of the README -> please [click here](./README-EN.md)
+## 2. 连接与配置
 
-Dobot   TCP-IP-Python-V3   二次开发api接口 （ [TCP-IP-Python-V3 Public English README](https://github.com/Dobot-Arm/TCP-IP-Python-V3.git) ）
+CR5 通过以太网 TCP/IP 通信：
 
+| 通道 | 端口 | 用途 |
+| --- | --- | --- |
+| Dashboard | 29999 | 使能、模式、速度、错误清除 |
+| Move | 30003 | `ServoP` / `ServoJ` / `MovL` 等运动指令 |
+| FeedBack | 30004 | 机器人状态、位姿、力传感器数据 |
 
-
-# 1. 简介
-
- TCP-IP-Python-V3  是为 dobot 公司旗下基于TCP/IP协议的Python的封装设计的软件开发套件。它基于 Python 语言开发，遵循dobot-TCP-IP控制通信协议，通过socket与机器终端进行Tcp连接，  并为用户提供了易用的api接口。通过 TCP-IP-Python-V3，用户可以快速地连接dobot机器并进行二次开发对机器的控制与使用。
-
-
-
-## 前置依赖
-
-* 电脑可用网线连接控制器的网口，然后设置固定 IP，与控制器 IP 在同一网段下。也可无线连接控制器。
-
-  有线连接时连接LAN1：ip为192.168.5.1, 有线连接时连接LAN2：ip为192.168100.1,  无线连接：ip为192.168.1.6
-
-* 尝试 ping 通控制器 IP，确保在同一网段下。
-
-* 安装Python环境，Python环境安装请参考  [Python安装指南](https://docs.python.org/zh-cn/3/using/index.html)  
-
-  python环境配置numpy： pip install numpy 
-
-* 此API接口与Demo适用于V3系列的3.5.5.0及以上控制器版本
-
-  
-
-
-##  版本和发布记录
-
-###  当前版本 v1.0.0.0
-
-|   版本   |  修改日期  |
-| :------: | :--------: |
-| v1.0.0.0 | 2023-10-20 |
-
-
-
-# 2. 技术支持
-
-
-
-# 3. TCP-IP-Python-V3 控制协议
-
-由于基于TCP/IP的通讯具有成本低、可靠性高、实用性强、性能高等特点；许多工业自动化项目对支持TCP/IP协议控制机器人需求广泛，因此 CR-V3 机器人将设计在TCP/IP协议的基础上，提供了丰富的接口用于与外部设备的交互；有关协议更详细的信息请查阅**《[越疆TCPIP控制协议文档6AXis](https://github.com/Dobot-Arm/TCP-IP-Protocol-6AXis.git)》**
-
-
-
-# 4. 获取 TCP-IP-Python-V3
-
-1. 从GitHub 下载或者克隆Dobot  TCP-IP-Python-V3 二次开发api程序
-
-   ```bash
-   `git clone https://github.com/Dobot-Arm/TCP-IP-Python-V3.git
-   ```
-
-2. 参考对应的 README.md 文档使用；
-
-   
-
-# 5. 文件类的说明以及使用方法
-
-1. main.py: 主程序运行入口。  
-
-2. dobot_api.py：封装机器人接口，具体Api指令用法根据[机器人TCP/IP远程控制方案](https://github.com/Dobot-Arm/TCP-IP-Protocol-6AXis.git)自行参考和使用。
-
-3. files：存放报警ID相关信息 , `alarm_controller.json`警告报警配置文件,`alarm_servo.json`伺服报警配置文件
-
-4. PythonExample.py :   包含一些api接口指令的用法和代码示例来参考
-
-dobot_api目录中的类说明：
-
-| Class             | Define                                        |
-| ----------------- | --------------------------------------------- |
-| DobotApi          | 基于tcp通信的接口类，封装了通信的基础业务     |
-| DobotApiDashboard | 继承于DobotClient，实现了具体的机器人基本功能 |
-| DobotApiMove      | 继承于DobotClient，实现了具体的机器人运动功能 |
-| MyType            | 数据类型对象，反馈机器人的状态列表            |
-| alarm_controller  | 警告报警配置信息                              |
-| alarm_servo       | 伺服报警配置信息                              |
-
-**DobotApi**  
-
- 基于tcp通信的接口类，提供对机器的tcp连接，关闭，获取ip，端口等功能， 封装了通信的基础业务。
+默认 IP 为 `192.168.5.1`，硬编码在 `cr5.py::CR5.__init__()` 和 `main.py::ConnectRobot()` 中。现场网段不同时请修改：
 
 ```python
-class DobotApi:
-    def __init__(self, ip, port, *args):
-    ""
-    if self.port == 29999 or self.port == 30003 or self.port == 30004:
-            try:
-                self.socket_dobot = socket.socket()
-                self.socket_dobot.connect((self.ip, self.port))
-    ""        
+self.dashboard = DobotApiDashboard("192.168.5.1", 29999)
+self.control   = DobotApiMove("192.168.5.1", 30003)
+self.feed      = DobotApi("192.168.5.1", 30004)
 ```
 
-**DobotApiDashboard**  
+连接前确认：
 
-   继承于DobotClient，  能发送一些设置相关的控制指令给机器人。实现了具体的机器人基本功能。  
-
-```c++
-class DobotApiDashboard(DobotApi):
-    """
-    Define class dobot_api_dashboard to establish a connection to Dobot
-    """
-    def EnableRobot(self,*dynParams):
-      """
+```bash
+ping 192.168.5.1
 ```
 
-**DobotApiMove**  
+---
 
-继承于DobotClient， 能发送一些运动相关的运动指令给机器人，实现了具体的机器人运动功能。  
+## 3. CR5 封装接口
 
 ```python
-class DobotApiMove(DobotApi):
-    """
-    Define class dobot_api_move to establish a connection to Dobot
-    """
-    def MovJ(self, x, y, z, r,*dynParams):
+from cr5 import CR5
 
+robot = CR5()
+robot.connect()                      # 启动反馈/清错线程，使能机械臂
+
+robot.MoveCartesian([x, y, z, rx, ry, rz])   # ServoP，单位 mm/度，非阻塞
+robot.MoveJoints([j1, ..., j6])              # ServoJ，单位度，非阻塞
+
+pose6 = robot.current_actual         # 最新反馈位姿（由后台线程更新）
+q6    = robot.QActual                # 最新关节角
+force = robot.get_sixForce()         # 六维力（未安装时返回 None）
+tcp_f = robot.get_TCPForce()         # TCP 力
+
+T = robot.get_cartesian()            # 由关节角正解得到的 SE3
+pose = robot.TConvertL(T)            # SE3 → [x,y,z,rx,ry,rz]（mm/度）
+
+robot.dashboard.SpeedFactor(20)      # 速度百分比
+robot.dashboard.AccJ(10)             # 关节加速度
+robot.dashboard.AccL(10)             # 笛卡尔加速度
+robot.dashboard.Continue()           # 解除暂停
 ```
 
-**MyType**
+### 3.1 后台线程
 
-数据类型对象，能反馈机器人的状态信息。
+`connect()` 会启动两个 daemon 线程：
 
-```c++
-MyType=np.dtype([('len', np.int16, ), 
-                ('Reserve', np.int16, (3,) ),
-```
+| 线程 | 作用 |
+| --- | --- |
+| `GetFeed` | 每 ~1 ms 读取 `DobotApiFeedBack.feedBackData()`，刷新 `current_actual`、`QActual`、`TCPForce`、`sixForce`、错误状态等 |
+| `ClearRobotError` | 每 5 s 检查告警；检测到告警时在终端提示并等待输入 `1` 后清除 |
 
+注意 `ClearRobotError` 在检测到告警时会调用 `input()`，会阻塞该线程，等待人工确认。
 
+### 3.2 运动到位判断
 
-分别创建控制类端口对象 ，运动类端口对象，反馈类端口对象，进行Tcp连接
+`ServoP` / `ServoJ` 都是**非阻塞**指令。主流程通过轮询 `robot.current_actual` 判断是否到位，示例：
 
 ```python
-    ip = "192.168.5.1"
-    dashboardPort = 29999
-    movePort = 30003
-    feedPort = 30004
-    print("正在建立连接...")
-    dashboard = DobotApiDashboard(ip, dashboardPort)
-    move = DobotApiMove(ip, movePort)
-    feed = DobotApi(ip, feedPort)
-    
+def wait_until_arrival(robot, target_xyz, threshold_mm=10.0, timeout=40.0):
+    ...
 ```
 
-使用控制端口下发控制指令信息，进行使能，下使能操作
+`arm_hand_grasp.py::GraspSystem.wait_until_arrival()` 就是这样实现的。
 
-```python
-     dashboard.EnableRobot()
-     dashboard.DisableRobot()
+### 3.3 坐标与欧拉角约定
+
+- 位置单位 **mm**，角度单位 **度**。
+- `pose2_to_matrix` / `matrix_to_pose` 使用 `scipy` 的 `xyz` 欧拉角顺序。
+- `LConvertT` / `TConvertL` 使用 `spatialmath.SE3` 的固定轴 `ZYX` 旋转组合。
+- 两套约定在项目中同时存在，跨模块传递位姿时务必确认顺序，详见 [../docs/architecture.md](../docs/architecture.md)。
+
+---
+
+## 4. 导纳控制实验
+
+`test_admittance_control.py` 演示了机械臂末端的柔顺控制：
+
+```bash
+cd arm_CR
+python test_admittance_control.py
 ```
 
-使用运动端口下发运行指令信息，控制机器运动
+操作方式：
 
-```python
-    x=10
-    y=10
-    z=10
-    r=10
-    move.MovL(x,y,z,r)
-    move.MovJ(x,y,z,r)
+| 按键 | 作用 |
+| --- | --- |
+| ↑ / ↓ | Y 方向虚拟力 |
+| ← / → | X 方向虚拟力 |
+| PageUp / PageDown | Z 方向虚拟力 |
+| `R` 或 `0` | 虚拟力清零 |
+| Ctrl+C | 退出 |
+
+控制链：
+
+```text
+键盘虚拟力 + 六维力反馈（当前版本主要使用虚拟力）
+        │
+        ▼
+  AdmittanceController.update()
+        │  位移增量
+        ▼
+  SE3.Trans(adj) * T_init
+        │
+        ▼
+  robot.MoveCartesian(target)
 ```
 
-通过反馈端口获取机器状态
+相关文件：
 
-```python
-    data = bytes()
-    while hasRead < 1440:
-        temp = feed.socket_dobot.recv(1440 - hasRead)
-        if len(temp) > 0:
-            hasRead += len(temp)
-            data += temp
-    hasRead = 0
-    feedInfo = np.frombuffer(data, dtype=MyType)
-    if hex((feedInfo['test_value'][0])) == '0x123456789abcdef':
-        print(feedInfo['EnableStatus'][0])   #输出机器使能状态
-```
+- `admittanccontroller.py`：`M/K/D` 参数可调，默认质量 0.05、刚度 30、阻尼 4。
+- `virtualforcecontroller.py`：虚拟力增量 0.2 N/次，上限 20 N。
+- `force_plotter.py` / `real_plot.py`：可视化力曲线（示例中部分绘图代码被注释）。
 
-   **具体使用详情请查看代码示例PythonExample.py和Demo示例**
+> 该示例是实验代码：六维力反馈已被读取和滤波，但当前控制主要使用键盘虚拟力；死区、运动阈值等逻辑部分被注释。
 
+---
 
+## 5. 已知限制
 
-# 7. 常见问题
-
-问题一：  Tcp连接  29999/30003端口无法连接或者连接后无法下发指令
-
- 解决方法：  如控制器版本是3.5.6.0版本以下，可尝试升级控制器为3.5.6.1版本及以上版本。 如机器已经是3.5.6.1版本及以上，可将问题现象和操作反馈给技术支持
-
-
-
-问题二： Tcp连接过程中  29999控制端口能发送指令，30003运动端口发送不了指令
-
- 解决方法：  运动队列被堵塞，尝试用29999端口下发clearerror()和 continue()指令来重新开启队列
-
-
-
-问题三：怎么判断机器运动指令是否到位
-
-解决方法：  可通过下发sync指令来判断机器运动指令是否到位
-
-​                     可通过对比目标点位笛卡尔坐标值和机器实际笛卡尔坐标值来判断是否到位
-
-
-
-# 8. 示例
-
-* Dobot-Demo 实现Tcp对机器的控制等交互，分别对控制端口，运动端口，反馈端口进行tcp连接，通过机器运动指令完成状态来进行下发指令，且对机器异常状态进行处理等功能。
-
-  
-
-1.  主线程：分别对机器控制端口，运动端口，反馈端口进行连接。给机器使能，MovL移动指令等动作
-
-![](/main.png)
-
-2.  反馈状态线程：实时反馈机器的状态信息
-
-![](/feed.png)
-
-3. 机器运动线程： 给机器下发运动指令
-
-![](/move.png)
-
-4.  异常处理线程：对机器异常状态进行判断和处理动作
-
-![](/excetion.png)
-
-**Demo运行的操作步骤时序如下图所示 ：**
-
-1. 从GitHub 获取越疆dobot  TCP-IP-Python-V3  二次开发Api程序
-
-   ```bash
-   `git clone https://github.com/Dobot-Arm/TCP-IP-Python-V3.git
-   ```
-
-2. 通过LAN1网口-连接机器端，设置本机机器IP地址为192.168.5.X  网段
-
-   控制面板>>网络>> Internet>>网络连接  
-
-   ![](netConnect.png)
-
-   
-
-   选择连接的以太网  >>  点击右键  >> 属性  >>   Internet协议版本(TCP/IPV4)
-
-   修改ip地址为192.168.5.X网段IP
-
-   <img src="/updateIP.png" style="zoom:80%;" />
-
-   
-
-3. 连接上位机DobotStudio Pro，连接机器，把机器模式切换至TCP/IP模式
-
-   ![](/checkTcpMode.png)
-
-   
-
-4. 运行程序，需要检测搜索到动态库，在VsCode/PyCharm中打开整个目录，直接运行 main.py。  
-
-   ![](/runpy.png)
-
-   
-
-  **常见问题：**
-
-​     **问题一： ModuleNotFoundError :  Nomode name 'numpy'**
-
-​    解决方法： 未安装numpy环境，  安装numpy      pip install numpy。
-
-
-
-​    **问题二： Demo中 不同机型（CR/Nova）对应的笛卡尔坐标**
-
-​     解决方法： 确认机型对应的笛卡尔坐标，修改Demo 坐标值。
-
-
-
-**运行示例前请确保机器处于安全位置，防止机器发生不必要的碰撞**
-
+- IP、端口硬编码，尚未抽成配置文件。
+- `CR5` 类未封装 `SpeedFactor` / `AccJ` / `AccL`，需要直接访问 `robot.dashboard`。
+- `current_actual` 由后台线程写入、其他线程无锁读取；高实时场景建议增加同步。
+- `get_cartesian()` 走 Dashboard 正解接口，频率较低；高频控制建议使用反馈中的 `current_actual`。
+- `ClearRobotError` 中的 `input()` 会阻塞告警处理线程，不适合无人值守。
+- 未实现断线重连；通信异常时需重启进程。
+- 导纳示例中的参数与机械臂负载、安装姿态强相关，换场景需重新整定。
