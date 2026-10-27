@@ -24,6 +24,7 @@ from gemini335 import Gemini335
 # [新增] 导入触觉手控制器
 from loophand.tactile_grasping import ShearGraspController 
 from process import targetpose_generation
+from vlm_process import segment_image
 
 # ================= 配置区域 =================
 
@@ -170,15 +171,23 @@ class GraspSystem:
                 
                 cv2.imwrite(f"{SAVE_DIR}/latest_color.png", color)
                 cv2.imwrite(f"{SAVE_DIR}/latest_depth.png", raw_depth)
-                mask = self.generate_simple_mask(color.shape)
+                # mask = self.generate_simple_mask(color.shape)
+                seg_mask = segment_image(color, output_mask='./debug_data/mask_output.png')
                 
+                if seg_mask is not None:
+                    # 转换成bool类型，给到graspnet进行深度点云索引，只要像素值大于 0，就变成 True，否则是 False
+                    seg_mask_bool = seg_mask > 0  
+                else:
+                    print("[警告] 掩码生成失败，跳过此次抓取规划")
+                    continue 
+
                 current_pose = self.robot.current_actual
                 if current_pose is None or len(current_pose) < 6: continue
                 
                 print(f"[Info] 拍照位姿: {list(current_pose)}")
 
                 # 算法生成目标
-                target_pose = targetpose_generation(color, raw_depth, mask, current_pose)
+                target_pose = targetpose_generation(color, raw_depth, seg_mask_bool, current_pose)
                 if target_pose is None:
                     print("[Info] 无目标，重试...")
                     time.sleep(1)

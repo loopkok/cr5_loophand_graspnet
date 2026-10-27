@@ -10,6 +10,7 @@ import argparse
 import importlib
 import scipy.io as scio
 from PIL import Image
+import cv2
 
 import torch
 from graspnetAPI import GraspGroup
@@ -23,6 +24,7 @@ from graspnet import GraspNet, pred_decode
 from graspnet_dataset import GraspNetDataset
 from collision_detector import ModelFreeCollisionDetector
 from data_utils import CameraInfo, create_point_cloud_from_depth_image
+from vlm_process import segment_image
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--checkpoint_path', required=True, help='Model checkpoint path')
@@ -50,11 +52,20 @@ def get_net():
 
 def get_and_process_data(data_dir):
     # load data
-    color = np.array(Image.open(os.path.join(data_dir, 'latest_color.png')), dtype=np.float32) / 255.0
-    depth = np.array(Image.open(os.path.join(data_dir, 'latest_depth.png')))
+    color_dir = os.path.join(data_dir, "color")
+    depth_dir = os.path.join(data_dir, "depth")
+    color_img = cv2.imread(os.path.join(color_dir, 'capture_1774507761_color.png'))
+    color = np.array(Image.open(os.path.join(color_dir, 'capture_1774507761_color.png')), dtype=np.float32) / 255.0
+    depth = np.array(Image.open(os.path.join(depth_dir, 'capture_1774507761_depth_raw.png')))
     img_h, img_w = depth.shape  # 读出来的可能是 (400, 640)
     print(f"Debug: 实际读取到的深度图尺寸为: {img_w}x{img_h}")
-    workspace_mask = np.array(Image.open(os.path.join(data_dir, 'workspace_mask.png')))
+    #depth_raw
+    #seg_mask= np.array(Image.open(os.path.join(data_dir, 'workspace_mask.png')))
+    seg_mask = segment_image(color_img, output_mask='./debug_data/mask_output.png')
+    
+    if seg_mask is not None:
+        # 转换成bool类型，给到graspnet进行深度点云索引，只要像素值大于 0，就变成 True，否则是 False
+        workspace_mask = seg_mask > 0  
     # meta = scio.loadmat(os.path.join(data_dir, 'meta.mat'))
     # intrinsic = meta['intrinsic_matrix']
     # factor_depth = meta['factor_depth']
@@ -117,7 +128,7 @@ def collision_detection(gg, cloud):
 def vis_grasps(gg, cloud):
     gg.nms()
     gg.sort_by_score()
-    gg = gg[:50]
+    gg = gg[:10]
     grippers = gg.to_open3d_geometry_list()
     o3d.visualization.draw_geometries([cloud, *grippers])
 
@@ -129,5 +140,6 @@ def demo(data_dir):
         gg = collision_detection(gg, np.array(cloud.points))
     vis_grasps(gg, cloud)
 if __name__=='__main__':
-    data_dir = 'doc/example_data/debug_data'
+    # data_dir = 'doc/example_data/debug_data'
+    data_dir = '/home/loopkok/Documents/cr5_loophand_graspnet/graspnet-baseline/apple_data'
     demo(data_dir)

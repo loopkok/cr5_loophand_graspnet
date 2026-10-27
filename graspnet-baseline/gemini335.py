@@ -126,12 +126,20 @@ class Gemini335:
             return None, None, None, None
 
     def save_frame(self, color_image, raw_depth_data, depth_viz_image, save_dir, prefix="capture"):
+        
+        color_dir = os.path.join(save_dir, "color")
+        depth_dir = os.path.join(save_dir, "depth")
+        viz_dir = os.path.join(save_dir, "viz")
+
+        os.makedirs(color_dir, exist_ok=True)      
+        os.makedirs(depth_dir, exist_ok=True)
+        os.makedirs(viz_dir, exist_ok=True)
         os.makedirs(save_dir, exist_ok=True)
         timestamp = int(time.time())
         
-        color_path = os.path.join(save_dir, f"{prefix}_{timestamp}_color.png")
-        depth_path = os.path.join(save_dir, f"{prefix}_{timestamp}_depth_raw.png")
-        viz_path = os.path.join(save_dir, f"{prefix}_{timestamp}_depth_viz.png")
+        color_path = os.path.join(color_dir, f"{prefix}_{timestamp}_color.png")
+        depth_path = os.path.join(depth_dir, f"{prefix}_{timestamp}_depth_raw.png")
+        viz_path = os.path.join(viz_dir, f"{prefix}_{timestamp}_depth_viz.png")
         
         cv2.imwrite(color_path, color_image)
         cv2.imwrite(depth_path, raw_depth_data)   # 保存16位原始深度(黑图)
@@ -188,7 +196,7 @@ class Gemini335:
                         print("退出程序...")
                         break
                     elif key == ord('s'):
-                        save_dir = "./cap_data"
+                        save_dir = "./apple_data"
                         # 保存时传入 3 个必要数据
                         self.save_frame(color, raw_depth, depth_viz, save_dir)
                         
